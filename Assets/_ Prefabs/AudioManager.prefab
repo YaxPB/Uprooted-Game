@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2381978384777259872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8463059531072256391}
+  - component: {fileID: 3761335075999668767}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8463059531072256391
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2381978384777259872}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.7500002, z: -15}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3761335075999668767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2381978384777259872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5215d7afb2bde4b9b9bad54e3c5af3d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Footstep
+    clip: {fileID: 8300000, guid: 486370302e4619a43aeb3f43c55dc744, type: 3}
+    volume: 0.6
+    pitch: 0.9
+    loop: 0
+    source: {fileID: 0}
+  - name: Theme
+    clip: {fileID: 8300000, guid: 9a8bd6f340057294aa61d358cc673fd0, type: 3}
+    volume: 0.8
+    pitch: 0.69
+    loop: 1
+    source: {fileID: 0}
+  - name: Jump
+    clip: {fileID: 8300000, guid: d963586aa02e5b74c96088af6e72aed9, type: 3}
+    volume: 1
+    pitch: 0.6
+    loop: 0
+    source: {fileID: 0}
+  - name: Dash
+    clip: {fileID: 8300000, guid: 8f81c49c5ef5e1f45b6d8513bc0e2465, type: 3}
+    volume: 0.55
+    pitch: 0.69
+    loop: 0
+    source: {fileID: 0}
+  - name: Plant
+    clip: {fileID: 8300000, guid: 486370302e4619a43aeb3f43c55dc744, type: 3}
+    volume: 1
+    pitch: 1.5
+    loop: 0
+    source: {fileID: 0}
+  - name: Collect
+    clip: {fileID: 8300000, guid: 1038588c10cb4d248ba865c25d85e395, type: 3}
+    volume: 0.6
+    pitch: 0.69
+    loop: 0
+    source: {fileID: 0}
+  - name: Button
+    clip: {fileID: 8300000, guid: 1038588c10cb4d248ba865c25d85e395, type: 3}
+    volume: 1
+    pitch: 0.69
+    loop: 0
+    source: {fileID: 0}
+  - name: Pause
+    clip: {fileID: 8300000, guid: 20f468d0295a16f4da05b351b390d923, type: 3}
+    volume: 1
+    pitch: 0.69
+    loop: 0
+    source: {fileID: 0}
+  - name: Sacrifice
+    clip: {fileID: 8300000, guid: 3095047ed06195040a2a25a1cbe5ba87, type: 3}
+    volume: 1
+    pitch: 1.2
+    loop: 0
+    source: {fileID: 0}
+  - name: Talking
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 0.69
+    loop: 0
+    source: {fileID: 0}
+  - name: Animals
+    clip: {fileID: 8300000, guid: 095bcddd82e157740bfac0c5d2a95274, type: 3}
+    volume: 1
+    pitch: 0.69
+    loop: 1
+    source: {fileID: 0}
+  - name: Switch
+    clip: {fileID: 8300000, guid: 43183a6633b97cf4592fb68b738115a0, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: RockBreak
+    clip: {fileID: 8300000, guid: e0ff265642962044bbfca7e88cf0b6c7, type: 3}
+    volume: 1
+    pitch: 0.85
+    loop: 0
+    source: {fileID: 0}
+  - name: DJump
+    clip: {fileID: 8300000, guid: fb28e8047c5bb784cace4f98d87131ed, type: 3}
+    volume: 0.8
+    pitch: 0.6
+    loop: 0
+    source: {fileID: 0}
+  - name: Cave
+    clip: {fileID: 8300000, guid: 8821f63ebdccc9648a23a471c00dbb3e, type: 3}
+    volume: 0.8
+    pitch: 0.73
+    loop: 1
+    source: {fileID: 0}

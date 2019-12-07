@@ -1,0 +1,90 @@
+{
+    "name": "Player Controls",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "9f70af09-bd34-46eb-ae38-d47c6362abe4",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Button",
+                    "id": "3f9483fc-48f6-4b81-8d3d-9068a54c5fc9",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "6e4b1726-d01e-427a-8327-08febc53f6e7",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Dash",
+                    "type": "Button",
+                    "id": "71a3dfc4-35e9-440e-86da-1dec86e7c121",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "efb9352d-bdc4-4c9b-be76-cead709c6854",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1799a861-48cc-4477-9904-ff9b7bd4e977",
+                    "path": "<HID::Logitech Logitech Dual Action Joystick>/dpad",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e3769871-9ce4-4604-a8bf-b2c7fb2a6fd7",
+                    "path": "<HID::Logitech Logitech Dual Action Joystick>/button2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8bdfb758-bf25-48f8-a816-ce243ed336f2",
+                    "path": "<HID::Logitech Logitech Dual Action Joystick>/button8",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cebdaff4-5678-48a2-bb6a-4f2531fe10de",
+                    "path": "<HID::Logitech Logitech Dual Action Joystick>/button2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
