@@ -560,7 +560,7 @@ MonoBehaviour:
   controller: {fileID: 1053044751}
   box: {fileID: 35549113}
   rockAnim: {fileID: 35549114}
-  shakie: {fileID: 539128339}
+  shakie: {fileID: 0}
   hit: 0
 --- !u!61 &35549113
 BoxCollider2D:
@@ -5518,7 +5518,7 @@ MonoBehaviour:
   controller: {fileID: 1053044751}
   box: {fileID: 437530879}
   rockAnim: {fileID: 437530880}
-  shakie: {fileID: 539128339}
+  shakie: {fileID: 0}
   hit: 0
 --- !u!61 &437530879
 BoxCollider2D:
@@ -6792,7 +6792,6 @@ GameObject:
   - component: {fileID: 539128336}
   - component: {fileID: 539128335}
   - component: {fileID: 539128338}
-  - component: {fileID: 539128339}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6903,20 +6902,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Cinemachine.CinemachineBrain+VcamActivatedEvent, Cinemachine, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &539128339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 539128334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55ce164d7b04a5d4b9a300721079889e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rockie: {fileID: 0}
-  frequency: 25
 --- !u!1 &546246423
 GameObject:
   m_ObjectHideFlags: 0
@@ -7893,7 +7878,7 @@ MonoBehaviour:
   controller: {fileID: 1053044751}
   box: {fileID: 590251055}
   rockAnim: {fileID: 590251056}
-  shakie: {fileID: 539128339}
+  shakie: {fileID: 0}
   hit: 0
 --- !u!61 &590251055
 BoxCollider2D:
@@ -8280,7 +8265,7 @@ MonoBehaviour:
   controller: {fileID: 1053044751}
   box: {fileID: 615136503}
   rockAnim: {fileID: 615136505}
-  shakie: {fileID: 539128339}
+  shakie: {fileID: 0}
   hit: 0
 --- !u!61 &615136503
 BoxCollider2D:
@@ -10163,7 +10148,7 @@ MonoBehaviour:
   controller: {fileID: 1053044751}
   box: {fileID: 770087432}
   rockAnim: {fileID: 770087434}
-  shakie: {fileID: 539128339}
+  shakie: {fileID: 0}
   hit: 0
 --- !u!61 &770087432
 BoxCollider2D:
@@ -11006,7 +10991,7 @@ MonoBehaviour:
   controller: {fileID: 1053044751}
   box: {fileID: 853263304}
   rockAnim: {fileID: 853263306}
-  shakie: {fileID: 539128339}
+  shakie: {fileID: 0}
   hit: 0
 --- !u!61 &853263304
 BoxCollider2D:
@@ -11661,7 +11646,7 @@ MonoBehaviour:
   controller: {fileID: 1053044751}
   box: {fileID: 923360587}
   rockAnim: {fileID: 923360588}
-  shakie: {fileID: 539128339}
+  shakie: {fileID: 0}
   hit: 0
 --- !u!61 &923360587
 BoxCollider2D:
@@ -13589,7 +13574,7 @@ MonoBehaviour:
   controller: {fileID: 1053044751}
   box: {fileID: 1021401725}
   rockAnim: {fileID: 1021401726}
-  shakie: {fileID: 539128339}
+  shakie: {fileID: 0}
   hit: 0
 --- !u!61 &1021401725
 BoxCollider2D:
@@ -16575,7 +16560,7 @@ MonoBehaviour:
   controller: {fileID: 1053044751}
   box: {fileID: 1190810075}
   rockAnim: {fileID: 1190810076}
-  shakie: {fileID: 539128339}
+  shakie: {fileID: 0}
   hit: 0
 --- !u!61 &1190810075
 BoxCollider2D:
@@ -17048,7 +17033,7 @@ MonoBehaviour:
   controller: {fileID: 1053044751}
   box: {fileID: 1204908955}
   rockAnim: {fileID: 1204908956}
-  shakie: {fileID: 539128339}
+  shakie: {fileID: 0}
   hit: 0
 --- !u!61 &1204908955
 BoxCollider2D:
@@ -17259,7 +17244,7 @@ MonoBehaviour:
   controller: {fileID: 1053044751}
   box: {fileID: 1205810763}
   rockAnim: {fileID: 1205810760}
-  shakie: {fileID: 539128339}
+  shakie: {fileID: 0}
   hit: 0
 --- !u!61 &1205810763
 BoxCollider2D:
@@ -21323,7 +21308,7 @@ MonoBehaviour:
   controller: {fileID: 1053044751}
   box: {fileID: 1575845634}
   rockAnim: {fileID: 1575845636}
-  shakie: {fileID: 539128339}
+  shakie: {fileID: 0}
   hit: 0
 --- !u!61 &1575845634
 BoxCollider2D:
@@ -23270,7 +23255,7 @@ MonoBehaviour:
   controller: {fileID: 1053044751}
   box: {fileID: 1750959523}
   rockAnim: {fileID: 1750959524}
-  shakie: {fileID: 539128339}
+  shakie: {fileID: 0}
   hit: 0
 --- !u!61 &1750959523
 BoxCollider2D:
@@ -25262,7 +25247,7 @@ MonoBehaviour:
   controller: {fileID: 1053044751}
   box: {fileID: 1909906097}
   rockAnim: {fileID: 1909906098}
-  shakie: {fileID: 539128339}
+  shakie: {fileID: 0}
   hit: 0
 --- !u!61 &1909906097
 BoxCollider2D:

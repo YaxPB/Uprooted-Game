@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Stats")]
     public float moveSpeed;
 
+    public Joystick joystick;
+
     public AudioManager _AudioManager;
     public bool canPlay = true;
     public float jCount = 0;
@@ -27,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
         if (controller.canMove)
         {
             controller.inputHorizontal = Input.GetAxisRaw("P1_Horizontal") * moveSpeed;
+            //controller.inputHorizontal = joystick.Horizontal * moveSpeed;
 
             if (Input.GetAxisRaw("P1_Horizontal") != 0 && canPlay && controller.Grounded)
             {
