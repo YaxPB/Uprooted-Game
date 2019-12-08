@@ -782,14 +782,11 @@ MonoBehaviour:
     name: Mom
     sentences:
     - 
-    - '*@74 98 ^$? Did you pack a thicker jacket than what you have on now?'
-    - '...'
-    - '...Dru, maybe you don''t have to go. We could sell 538 to get by, your dad
-      could try and take more shifts...'
-    - We might lose the house, but at least we'd all be together?
-    - '...'
-    - I know, I know. You want Nara to have the best of everything. It's just... I'll
-      miss you.
+    - Dru, is that what you're wearing? You'll be far too cold wearing just that in
+      the caves.
+    - Whatever you leave behind--your 9%1, your abilities--you won't be getting back.
+    - There's not even a guarantee you'll ever be able to return, so don't go forgetting
+      anything.
 --- !u!114 &49424730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1253,11 +1250,9 @@ MonoBehaviour:
     name: Book
     sentences:
     - 
-    - 'You wrote in this journal for Nara to find and read later once she''s a little
-      older. '
-    - 'Within are all the reasons you''ve had to live apart from her. '
-    - For the house, for food on the table, for every opportunity you can give her.
-      It's all for her sake.
+    - You pause to flip to yesterday's entry.
+    - "\x1CIt's settled. Tomorrow I'll pack what few things I need and finally see
+      what I can become in the towns beyond this one."
 --- !u!114 &86581659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4543,9 +4538,9 @@ MonoBehaviour:
     name: ???
     sentences:
     - 
-    - You run your hands over the cracked rock doorway. Such gates are everywhere
-      in Artemesia, sprouting from stone overnight.
-    - Just being back has revitalized you. You can pass through this effortlessly.
+    - You run your hands over the cracked rock. Such gates are everywhere here, sprouting
+      from stone overnight.
+    - You can pass through this effortlessly.
     - PRESS 'RB' TO ROCK DASH
 --- !u!114 &351488051
 MonoBehaviour:
@@ -4633,15 +4628,12 @@ MonoBehaviour:
   dialogue:
     name: Uncle
     sentences:
-    - '...You can''t make it up here, can you?'
-    - It's alright. We can talk from here. I should've realized that you had to give
-      up a lot in order to make it this far.
-    - 'Do you have to leave? I know living like this, away from home and out of your
-      element, isn''t easy. '
-    - I constantly miss my abilities, the people, the 912... I'm even losing bits
-      and pieces of language.
-    - 'Hell, I didn''t even hear that you''d had a kid until recently. 695 7 0`~$%  to
-      you, Dru. Good luck out there. '
+    - '...'
+    - "You...You can\u2019t make it up here, can you?"
+    - It's alright, I figured as much. If you're this far out from home, well, you've
+      probably already lost some of your abilities.
+    - I hope whatever you're looking for, it's worth the losses.
+    - Now hurry along now! Or you'll end up like me.
 --- !u!212 &355637104
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5417,10 +5409,9 @@ MonoBehaviour:
     name: Trophy
     sentences:
     - 
-    - 'You smile fondly at the little clay creature your daughter made. '
-    - She'd dropped it to go hide earlier today when you walked into her hideyhole.
-    - You left when she was just a baby, so she still doesn't call you "Mom" yet,
-      but hopefully she'll come around.
+    - "The clay is cracked and brittle from years of gathering dust. \r"
+    - You were just a sprout when you made this, and you're surprised your mother
+      kept it.
 --- !u!114 &432191923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27354,8 +27345,8 @@ MonoBehaviour:
     - 
     - The spongy surface of the mushroom caps around you is as familiar as your own
       skin, sinew, muscle, bone.
-    - Leaping over them is as effortless as breathing now after all the years you
-      spent playing on them when you were young.
+    - Leaping over them is effortless now after all the years you spent playing on
+      them when you were young.
     - PRESS 'A' TWICE TO DOUBLE JUMP.
 --- !u!114 &2039595744
 MonoBehaviour:
@@ -27722,11 +27713,9 @@ MonoBehaviour:
     name: Dad
     sentences:
     - 
-    - 'Nara''s still hiding away somewhere, huh? Whata shy little #\.'
-    - She'll come around eventually, Dru. Once she's older, she'll appreciate how
-      much you've sacrificed.
-    - I keep accidentally calling her Dru too, you know. She's so much like you that
-      sometimes it hurts.
+    - 'Are you really going to go through with this? I doubt you''ll last more than
+      a #^265 or two.'
+    - '...If you do, though, make sure to at least send us a letter once in a while.'
 --- !u!114 &2058332013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28501,11 +28490,10 @@ MonoBehaviour:
     name: Picture Frame
     sentences:
     - 
-    - 'This is a picture of your parents at the lake, their arms wrapped protectively
-      around your daughter, Nara. '
-    - It's just another one of the countless moments you've missed of your daughter's
-      childhood.
-    - You make a mental note to visit Nara's little hideyhole before you go.
+    - The photo depicts a much younger you visiting the lake with your parents.
+    - You look uncomfortable standing next to them.
+    - But then again, maybe you've never been comfortable here. You're not certain
+      you ever will be.
 --- !u!114 &2139038882
 MonoBehaviour:
   m_ObjectHideFlags: 0
