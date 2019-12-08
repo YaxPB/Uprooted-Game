@@ -89,6 +89,8 @@ public class PlayerController : MonoBehaviour
     public PlayerMovement playerMovement;
     public Animator anim;
 
+    public Joystick joystick;
+
     [Header("Events")]
     [Space]
 
@@ -128,6 +130,19 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         inputVertical = Input.GetAxisRaw("P1_Vertical");
+
+        //if(joystick.Vertical >= .35f)
+        //{
+        //    inputVertical = 1;
+        //}
+        //else if(joystick.Vertical <= .35f)
+        //{
+        //    inputVertical = -1;
+        //}
+        //else
+        //{
+        //    inputVertical = 0f;
+        //}
 
         Move(inputHorizontal * Time.fixedDeltaTime, inputCrouch, inputJump);
         
@@ -272,13 +287,13 @@ public class PlayerController : MonoBehaviour
                 dashCoolDown = dashCoolDownValue;
             }
             //Down = 3
-            else if (inputVertical < 0 && Input.GetButtonDown("Dash") && extraDash > 0 && dashReady)
-            {
-                direction = 3;
-                extraDash--;
-                dashReady = false;
-                dashCoolDown = dashCoolDownValue;
-            }
+            //else if (inputVertical < 0 && Input.GetButtonDown("Dash") && extraDash > 0 && dashReady)
+            //{
+            //    direction = 3;
+            //    extraDash--;
+            //    dashReady = false;
+            //    dashCoolDown = dashCoolDownValue;
+            //}
         }
         else
         {

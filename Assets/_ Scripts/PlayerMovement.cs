@@ -29,7 +29,19 @@ public class PlayerMovement : MonoBehaviour
         if (controller.canMove)
         {
             controller.inputHorizontal = Input.GetAxisRaw("P1_Horizontal") * moveSpeed;
-            //controller.inputHorizontal = joystick.Horizontal * moveSpeed;
+
+            //if(joystick.Horizontal >= .3f)
+            //{
+            //    controller.inputHorizontal = moveSpeed;
+            //}
+            //else if(joystick.Horizontal <= .3f)
+            //{
+            //    controller.inputHorizontal = -moveSpeed;
+            //}
+            //else
+            //{
+            //    controller.inputHorizontal = 0f;
+            //}
 
             if (Input.GetAxisRaw("P1_Horizontal") != 0 && canPlay && controller.Grounded)
             {
