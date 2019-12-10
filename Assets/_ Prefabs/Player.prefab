@@ -313,6 +313,7 @@ MonoBehaviour:
   spawnPoint: {x: 0, y: 0, z: 0}
   playerMovement: {fileID: 4817190501762431216}
   anim: {fileID: 1591801056}
+  joystick: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
@@ -359,6 +360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 4817190501762431217}
   moveSpeed: 32
+  joystick: {fileID: 0}
   _AudioManager: {fileID: 0}
   canPlay: 1
   jCount: 0

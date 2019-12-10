@@ -119,7 +119,7 @@ MonoBehaviour:
   - name: RockBreak
     clip: {fileID: 8300000, guid: e0ff265642962044bbfca7e88cf0b6c7, type: 3}
     volume: 1
-    pitch: 0.85
+    pitch: 0.88
     loop: 0
     source: {fileID: 0}
   - name: DJump
