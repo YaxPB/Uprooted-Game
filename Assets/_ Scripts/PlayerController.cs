@@ -182,7 +182,7 @@ public class PlayerController : MonoBehaviour
         if (isTouchingWall)
         {
             extraJumps = 1;
-            if (inputVertical > 0)
+            if (inputVertical < 0)
             {
                 isClimbingUp = true;
             }
@@ -191,7 +191,7 @@ public class PlayerController : MonoBehaviour
                 isClimbingUp = false;
             }
 
-            if (inputVertical < 0)
+            if (inputVertical > 0)
             {
                 isClimbingDown = true;
             }
