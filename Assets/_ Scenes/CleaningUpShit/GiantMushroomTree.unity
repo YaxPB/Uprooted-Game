@@ -4320,7 +4320,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &336515850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5316,7 +5316,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 415362380}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 578917347}
+        m_MethodName: InvokeJump
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &415362380
@@ -6328,7 +6339,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &484347657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8022,6 +8033,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &578917347 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4817190501762431216, guid: aaa50b7f5dad0fd419c9e04eec7ec0bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1030042789}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d91d0d0577f1d94a94bead9d4d662b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &585935561
 GameObject:
   m_ObjectHideFlags: 0
@@ -8600,7 +8623,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &611197485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12753,7 +12776,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 951219712}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -14764,6 +14787,11 @@ PrefabInstance:
       propertyPath: _AudioManager
       value: 
       objectReference: {fileID: 1843087843}
+    - target: {fileID: 4817190501762431216, guid: aaa50b7f5dad0fd419c9e04eec7ec0bc,
+        type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 1066708703}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aaa50b7f5dad0fd419c9e04eec7ec0bc, type: 3}
 --- !u!1 &1035480258
@@ -15944,6 +15972,18 @@ Transform:
   m_Father: {fileID: 1422359677}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1066708703 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252,
+    type: 3}
+  m_PrefabInstance: {fileID: 990612784}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1097559908
 GameObject:
   m_ObjectHideFlags: 0
@@ -19614,7 +19654,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -8.2, y: 7.100006}
+  m_AnchoredPosition: {x: -8.200012, y: 7.100006}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1374078082
@@ -22672,7 +22712,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1584275355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23450,7 +23490,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678303447}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 

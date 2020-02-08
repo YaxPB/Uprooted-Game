@@ -6,6 +6,7 @@ public class PlayerAnim : MonoBehaviour
 {
     private Animator anim;
     public PlayerController controller;
+    public FixedJoystick joystick;
 
     public float passive = 0;
     public float passiveTime = 3.5f;
@@ -28,9 +29,10 @@ public class PlayerAnim : MonoBehaviour
 
     void Update()
     {
-        inputHorizontal = Input.GetAxisRaw("P1_Horizontal");
-        inputJump = Input.GetButtonDown("Jump");
-        dashInput = Input.GetButtonDown("Dash");
+        //inputHorizontal = Input.GetAxisRaw("P1_Horizontal");
+        inputHorizontal = joystick.Direction.x;
+        inputJump = Input.GetButtonDown("Jump");                    //fix
+        dashInput = Input.GetButtonDown("Dash");                    //^
 
         dashTime += Time.deltaTime;
 

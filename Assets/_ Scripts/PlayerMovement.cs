@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Stats")]
     public float moveSpeed;
 
-    public Joystick joystick;
+    public FixedJoystick joystick;
 
     public AudioManager _AudioManager;
     public bool canPlay = true;
@@ -28,7 +28,17 @@ public class PlayerMovement : MonoBehaviour
     {
         if (controller.canMove)
         {
-            controller.inputHorizontal = Input.GetAxisRaw("P1_Horizontal") * moveSpeed;
+            //controller.inputHorizontal = Input.GetAxisRaw("P1_Horizontal") * moveSpeed;
+
+            controller.inputHorizontal = joystick.Direction.x * moveSpeed;
+
+            Debug.Log(joystick.Direction);
+
+            //if(Application.platform == RuntimePlatform.IPhonePlayer)
+            //{
+            //   controller.inputHorizontal = joystick.
+                 
+            //}
 
             //if(joystick.Horizontal >= .3f)
             //{
@@ -64,11 +74,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetButtonDown("Jump") && controller.extraJumps > 0 && jCount < 1)
             {
-                controller.inputJump = true;
-                _AudioManager.sounds[2].pitch = Random.Range(1.3f, 2.5f);
-                _AudioManager.sounds[2].volume = Random.Range(0.5f, 0.7f);
-                _AudioManager.Play("Jump");
-                jCount++;
+                InvokeJump();
             }
             else if (Input.GetButtonDown("Jump") && controller.extraJumps > 0 && jCount >= 1 && controller.canDoubleJump)
             {
@@ -82,5 +88,15 @@ public class PlayerMovement : MonoBehaviour
     public void OnLanding()
     {
         jCount = 0;
+    }
+
+    public void InvokeJump()
+    {
+        Debug.Log("hello");
+        controller.inputJump = true;
+        _AudioManager.sounds [2].pitch = Random.Range(1.3f, 2.5f);
+        _AudioManager.sounds[2].volume = Random.Range(0.5f, 0.7f);
+        _AudioManager.Play("Jump");
+        jCount++;
     }
 }
