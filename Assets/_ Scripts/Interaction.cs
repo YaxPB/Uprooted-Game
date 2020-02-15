@@ -32,58 +32,9 @@ public class Interaction : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButton("Interact") && currentInterObj && touchingCP)
+        if (Input.GetButton("Interact") && currentInterObj)
         {
-            //Invokes function in player controller
-            currentInterObj.SendMessage("setCheckpoint");
-            Debug.Log("Set Checkpoint");
-        }
-
-        if (Input.GetButton("Interact") && currentInterObj && touchingDJ)
-        {
-            anim.SetBool("isJumping", false);
-            anim.SetBool("isRunning", false);
-            anim.SetBool("isIdle", false);
-            anim.SetBool("isDashing", false);
-
-            currentInterObj.SendMessage("sacrificeDoubleJump");
-            Debug.Log("Sacrificed Double Jump");
-        }
-
-        if (Input.GetButton("Interact") && currentInterObj && touchingMC)
-        {
-            currentInterObj.SendMessage("sacrificeMossClimb");
-            Debug.Log("Sacrificed Moss Climb");
-        }
-
-        if (Input.GetButton("Interact") && currentInterObj && touchingRD)
-        {
-            currentInterObj.SendMessage("sacrificeRockDash");
-            Debug.Log("Sacrificed Rock Dash");
-        }
-
-        if (Input.GetButton("Interact") && currentInterObj && touchingSwitch)
-        {
-            shouldSwitch = false;
-            currentInterObj.SendMessage("setSwitchOn");
-        }
-
-        if (Input.GetButton("Interact") && currentInterObj && touchingDialogue)
-        {
-            anim.SetBool("isJumping", false);
-            anim.SetBool("isRunning", false);
-            anim.SetBool("isIdle", false);
-            anim.SetBool("isDashing", false);
-
-            shouldDisplay = false;
-
-            if (!stop)
-            {
-                dt.TriggerDialogue();
-                Debug.Log(stop);
-            }
-            Debug.Log(stop);
-            //stop = true; 
+            InvokeInteraction();
         }
     }
 
@@ -156,5 +107,62 @@ public class Interaction : MonoBehaviour
 
         shouldDisplay = true;
         stop = false;
+    }
+
+    public void InvokeInteraction()
+    {
+        if (touchingCP)
+        {
+            //Invokes function in player controller
+            currentInterObj.SendMessage("setCheckpoint");
+            Debug.Log("Set Checkpoint");
+        }
+
+        if (touchingDJ)
+        {
+            anim.SetBool("isJumping", false);
+            anim.SetBool("isRunning", false);
+            anim.SetBool("isIdle", false);
+            anim.SetBool("isDashing", false);
+
+            currentInterObj.SendMessage("sacrificeDoubleJump");
+            Debug.Log("Sacrificed Double Jump");
+        }
+
+        if(touchingMC)
+        {
+            currentInterObj.SendMessage("sacrificeMossClimb");
+            Debug.Log("Sacrificed Moss Climb");
+        }
+
+        if(touchingRD)
+        {
+            currentInterObj.SendMessage("sacrificeRockDash");
+            Debug.Log("Sacrificed Rock Dash");
+        }
+
+        if(touchingSwitch)
+        {
+            shouldSwitch = false;
+            currentInterObj.SendMessage("setSwitchOn");
+        }
+
+        if(touchingDialogue)
+        {
+            anim.SetBool("isJumping", false);
+            anim.SetBool("isRunning", false);
+            anim.SetBool("isIdle", false);
+            anim.SetBool("isDashing", false);
+
+            shouldDisplay = false;
+
+            if (!stop)
+            {
+                dt.TriggerDialogue();
+                Debug.Log(stop);
+            }
+            Debug.Log(stop);
+            //stop = true; 
+        }
     }
 }
