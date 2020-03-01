@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
     public PlayerMovement playerMovement;
     public Animator anim;
 
-    public FixedJoystick joystick;
+    public Joystick joystick;
 
     [Header("Events")]
     [Space]
@@ -129,7 +129,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        inputVertical = joystick.Direction.y;
+        inputVertical = Input.GetAxisRaw("P1_Vertical");
 
         //if(joystick.Vertical >= .35f)
         //{
@@ -271,14 +271,22 @@ public class PlayerController : MonoBehaviour
         if (direction == 0)
         {
             //Left = 1
-            if (Input.GetButtonDown("Dash") && extraDash > 0 && dashReady)
+            if (!FacingRight && Input.GetButtonDown("Dash") && extraDash > 0 && dashReady)
             {
-                InvokeDash();
+                direction = 1;
+                extraDash--;
+                dashReady = false;
+                dashCoolDown = dashCoolDownValue;
             }
             //Right = 2
-
+            else if (FacingRight && Input.GetButtonDown("Dash") && extraDash > 0 && dashReady)
+            {
+                direction = 2;
+                extraDash--;
+                dashReady = false;
+                dashCoolDown = dashCoolDownValue;
+            }
             //Down = 3
-
             //else if (inputVertical < 0 && Input.GetButtonDown("Dash") && extraDash > 0 && dashReady)
             //{
             //    direction = 3;
@@ -460,23 +468,5 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(duration);
         isFrozen = value;
-    }
-
-    public void InvokeDash()
-    {
-        if(!FacingRight)
-        {
-            direction = 1;
-            extraDash--;
-            dashReady = false;
-            dashCoolDown = dashCoolDownValue;
-        }
-        else if(FacingRight)
-        {
-            direction = 2;
-            extraDash--;
-            dashReady = false;
-            dashCoolDown = dashCoolDownValue;
-        }
     }
 }

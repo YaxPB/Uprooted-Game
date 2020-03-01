@@ -78,7 +78,9 @@ public class PlayerMovement : MonoBehaviour
             }
             else if (Input.GetButtonDown("Jump") && controller.extraJumps > 0 && jCount >= 1 && controller.canDoubleJump)
             {
-                InvokeDJump();
+                controller.inputJump = true;
+                _AudioManager.Play("DJump");
+                jCount = 0;
             }
         }
     }
@@ -96,12 +98,5 @@ public class PlayerMovement : MonoBehaviour
         _AudioManager.sounds[2].volume = Random.Range(0.5f, 0.7f);
         _AudioManager.Play("Jump");
         jCount++;
-    }
-
-    public void InvokeDJump()
-    {
-        controller.inputJump = true;
-        _AudioManager.Play("DJump");
-        jCount = 0;
     }
 }
