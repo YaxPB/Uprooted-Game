@@ -129,7 +129,9 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        inputVertical = Input.GetAxisRaw("P1_Vertical");
+        //inputVertical = Input.GetAxisRaw("P1_Vertical");
+
+        inputVertical = joystick.Direction.y;
 
         //if(joystick.Vertical >= .35f)
         //{

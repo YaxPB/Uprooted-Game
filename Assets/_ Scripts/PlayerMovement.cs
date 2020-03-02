@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
             //    controller.inputHorizontal = 0f;
             //}
 
-            if (Input.GetAxisRaw("P1_Horizontal") != 0 && canPlay && controller.Grounded)
+            if (controller.inputHorizontal != 0 && canPlay && controller.Grounded)
             {
                 canPlay = false;
                 _AudioManager.sounds[0].pitch = Random.Range(0.7f, 1f);
@@ -64,12 +64,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetButtonDown("Dash") && controller.dashReady)
             {
-                Debug.Log("dashed");
-                canPlay = false;
-                _AudioManager.sounds[0].pitch = Random.Range(0.7f, 1f);
-                _AudioManager.sounds[0].volume = Random.Range(0.5f, 0.7f);
-                _AudioManager.Play("Dash");
-                Invoke("setSound", 1f);
+                InvokeDash();
             }
 
             if (Input.GetButtonDown("Jump") && controller.extraJumps > 0 && jCount < 1)
@@ -78,9 +73,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else if (Input.GetButtonDown("Jump") && controller.extraJumps > 0 && jCount >= 1 && controller.canDoubleJump)
             {
-                controller.inputJump = true;
-                _AudioManager.Play("DJump");
-                jCount = 0;
+                InvokeDJump();
             }
         }
     }
@@ -88,6 +81,16 @@ public class PlayerMovement : MonoBehaviour
     public void OnLanding()
     {
         jCount = 0;
+    }
+
+    public void InvokeDash()
+    {
+        Debug.Log("dashed");
+        canPlay = false;
+        _AudioManager.sounds[0].pitch = Random.Range(0.7f, 1f);
+        _AudioManager.sounds[0].volume = Random.Range(0.5f, 0.7f);
+        _AudioManager.Play("Dash");
+        Invoke("setSound", 1f);
     }
 
     public void InvokeJump()
@@ -98,5 +101,12 @@ public class PlayerMovement : MonoBehaviour
         _AudioManager.sounds[2].volume = Random.Range(0.5f, 0.7f);
         _AudioManager.Play("Jump");
         jCount++;
+    }
+
+    public void InvokeDJump()
+    {
+        controller.inputJump = true;
+        _AudioManager.Play("DJump");
+        jCount = 0;
     }
 }
