@@ -40,6 +40,7 @@ public class PlayerAnim : MonoBehaviour
         {
             if (inputHorizontal > 0 || inputHorizontal < 0)
             {
+                //Debug.Log(joystick.Direction.x);
                 passive = 0;
                 anim.SetBool("isRunning", true);
                 anim.SetBool("isIdle", false);
@@ -60,42 +61,12 @@ public class PlayerAnim : MonoBehaviour
 
             if (inputJump)
             {
-                jCount++;
-
-                if (jCount <= 1)
-                {
-                    passive = 0;
-                    anim.SetBool("isJumping", true);
-                    anim.SetBool("isRunning", false);
-                    anim.SetBool("isIdle", false);
-                    anim.SetBool("isDashing", false);
-                    reset = false;
-                }
-
-                if (jCount > 1 && controller.canDoubleJump)
-                {
-                    passive = 0;
-                    anim.SetBool("isJumping", false);
-                    anim.SetBool("isDJumping", true);
-                    anim.SetBool("isRunning", false);
-                    anim.SetBool("isIdle", false);
-                    anim.SetBool("isDashing", false);
-                    reset = false;
-                }
+                InvokePJump();
             }
 
             if (dashInput && controller.dashReady)
             {
-                if (dashTime > dashTimer)
-                {
-                    passive = 0;
-                    anim.SetBool("isJumping", false);
-                    anim.SetBool("isRunning", false);
-                    anim.SetBool("isIdle", false);
-                    anim.SetBool("isDashing", true);
-                    reset = false;
-                    Invoke("DashSet", 0.25f);
-                }
+                InvokePDash();
             }
         }
     }
@@ -118,5 +89,45 @@ public class PlayerAnim : MonoBehaviour
         anim.SetBool("isDJumping", false);
         dashTime = 0;
         jCount = 0;
+    }
+
+    public void InvokePJump()
+    {
+        jCount++;
+
+        if (jCount <= 1)
+        {
+            passive = 0;
+            anim.SetBool("isJumping", true);
+            anim.SetBool("isRunning", false);
+            anim.SetBool("isIdle", false);
+            anim.SetBool("isDashing", false);
+            reset = false;
+        }
+
+        if (jCount > 1 && controller.canDoubleJump)
+        {
+            passive = 0;
+            anim.SetBool("isJumping", false);
+            anim.SetBool("isDJumping", true);
+            anim.SetBool("isRunning", false);
+            anim.SetBool("isIdle", false);
+            anim.SetBool("isDashing", false);
+            reset = false;
+        }
+    }
+
+    public void InvokePDash()
+    {
+        if (dashTime > dashTimer)
+        {
+            passive = 0;
+            anim.SetBool("isJumping", false);
+            anim.SetBool("isRunning", false);
+            anim.SetBool("isIdle", false);
+            anim.SetBool("isDashing", true);
+            reset = false;
+            Invoke("DashSet", 0.25f);
+        }
     }
 }

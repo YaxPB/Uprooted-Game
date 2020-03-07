@@ -46,11 +46,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (amTalking && canSkipText && Input.GetButton("Interact"))
         {
-            if (!finished)
-            {
-                canSkipText = false;
-                DisplayNextSentence();
-            }
+            InvokeSentence();
         }
     }
 
@@ -127,5 +123,14 @@ public class DialogueManager : MonoBehaviour
         //Debug.Log()
 
         DialogueEnded?.Invoke();
+    }
+
+    public void InvokeSentence()
+    {
+        if (!finished)
+        {
+            canSkipText = false;
+            DisplayNextSentence();
+        }
     }
 }
