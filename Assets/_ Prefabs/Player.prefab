@@ -584,6 +584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 4817190501762431217}
+  joystick: {fileID: 0}
   passive: 0
   passiveTime: 3.5
   dashTime: 0
